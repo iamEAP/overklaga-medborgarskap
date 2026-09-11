@@ -1,0 +1,30 @@
+name: Validate
+
+# Runs the structural checks in scripts/validate.py on every pull request and
+# on pushes to main. Same script the release workflow runs, so a skill that
+# wouldn't package correctly fails here first, before it can be merged.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate skills and manifests
+        run: |
+          python -m pip install --quiet pyyaml
+          python scripts/validate.py

@@ -1,0 +1,21 @@
+{
+  "name": "overklaga-medborgarskap",
+  "displayName": "Överklaga medborgarskap",
+  "version": "1.0.0",
+  "description": "Agent Skills för överklagande till migrationsdomstolen. Endast för avslag på medborgarskapsansökan som beror på att 2026 års medborgarskapsreform saknar övergångsregler. Gäller inte avslag på andra grunder. Inte juridisk rådgivning.",
+  "author": {
+    "name": "iamEAP",
+    "url": "https://github.com/iamEAP"
+  },
+  "homepage": "https://github.com/iamEAP/overklaga-medborgarskap",
+  "repository": "https://github.com/iamEAP/overklaga-medborgarskap",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "medborgarskap",
+    "överklagande",
+    "migrationsdomstolen",
+    "swedish-citizenship",
+    "agent-skills"
+  ],
+  "skills": "./skills"
+}
